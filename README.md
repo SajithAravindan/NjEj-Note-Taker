@@ -29,7 +29,7 @@ AS A small business owner
 (./imgs/demo.jpg)]()
 
 ## Review
--  Deployed Application URL: 
+-  Deployed Application URL: https://notetakerapp0411-d81cd7b376e0.herokuapp.com/
 -  GitHub Repository: https://github.com/SajithAravindan/NjEj-Note-Taker.git
 
 
