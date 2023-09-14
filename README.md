@@ -28,7 +28,7 @@ AS A small business owner
 
 ## Demo
 
-(./imgs/demo.jpg)]()
+<img src='./imgs/Demo.jpg' alt='Demo for Note Maker'>
 
 ## Review
 -  Deployed Application URL: https://notetakerapp0411-d81cd7b376e0.herokuapp.com/
