@@ -1,6 +1,1 @@
-[
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    }
-]
+[{"title":"Test Title","text":"Test text"},{"title":"Create Note Taker","text":"An Application that can be used to write and save notes. SO THAT User can organize their thoughts and keep track of tasks that needs to be completed. ","id":"3eef7f03-25d2-4f40-a478-16c15848b939"},{"title":"Add get Funtionality","text":"THEN I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column","id":"7afbfb1a-efac-4132-a383-df5841856ba0"}]
