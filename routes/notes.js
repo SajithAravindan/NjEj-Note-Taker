@@ -3,6 +3,7 @@ const notes = require('express').Router();//Router
 const { v4: uuidv4 } = require('uuid');// Generates Unique Id Lib
 const path = require('path'); //Path
 const fileSystem = require('fs');// File System Lib
+const { response } = require('express');
 
 //Handler for Get - called from FrontEnd to display all Notes to User.
 //Get - 'api/notes' will return the db.json file as jason.
@@ -28,3 +29,10 @@ notes.post('/notes', (request, response) => {
     response.json(currDB);//Sends back the New Updated DB
 });
 
+//Handler for DELETE - called from FrontEnd when User wants to delete a Note.
+//POST - 'api/notes'receives ID of the Note to be deleted
+//Rest End funtion removes the Note relevant to the received Note ID from the DB.Json file
+//And sends back the Updated DB.Json file as response.
+notes.delete('/notes:id',(request,response)=>{
+    
+})
