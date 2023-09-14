@@ -16,7 +16,7 @@ notes.get('/notes', (request, response) => {
 //Rest End funtion adds the new Note to the DB.Json file
 //And sends back the Updated DB.Json file as response.
 notes.post('/notes', (request, response) => {
-    let currDB = fileSystem.readFileSync('db/db.json');//read the existing file
+    let currDB = fileSystem.readFileSync('db/db.json');//reads the data from existing file
     currDB = JSON.parse(currDB);//Parse data
     //Create New Note Object
     let userCreatedNote = {
@@ -25,7 +25,7 @@ notes.post('/notes', (request, response) => {
         id: uuidv4(),//Creates Unique Id for the New Note
     };
     currDB.push(userCreatedNote);//Adds the new Note to the Current DB data object
-    fileSystem.writeFileSync('db/db.json',JSON.stringify(currDB));//Writes the updated DB 
+    fileSystem.writeFileSync('db/db.json',JSON.stringify(currDB));//Writes the updated data 
     response.json(currDB);//Sends back the New Updated DB
 });
 
@@ -34,5 +34,12 @@ notes.post('/notes', (request, response) => {
 //Rest End funtion removes the Note relevant to the received Note ID from the DB.Json file
 //And sends back the Updated DB.Json file as response.
 notes.delete('/notes:id',(request,response)=>{
-    
-})
+    let currDB = fileSystem.readFileSync('db/db.json');//reads the data from existing file
+    currDB = JSON.parse(currDB);//Parse data
+    //removes the Note relevant to the received Note ID from the read data
+    let removedData = currDB.filter(item => item.id != request.params.id);
+    fileSystem.writeFileSync('db/db.json',JSON.stringify(removedData));//Writes the updated data 
+    response.json(removedData);//Sends back the New Updated DBy
+});
+
+module.exports = notes;//exports the Handler
